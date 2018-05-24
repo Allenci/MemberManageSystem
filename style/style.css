@@ -1,0 +1,394 @@
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  font-family: 'Noto Sans TC', Helvetica, Arial, sans-serif;
+  background-image: -webkit-linear-gradient(30deg, #64b3f4 0%, #c2e59c 100%);
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
+
+input, button {
+  border: none;
+  outline: none;
+  margin-bottom: 0px;
+  background: none;
+  font-weight: 100;
+  font-family: 'Noto Sans TC', Helvetica, Arial, sans-serif;
+}
+
+.tip {
+  font-size: 40px;
+  margin: 20px auto 20px;
+  text-align: center;
+  font-weight: normal;
+  color: #343436;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 1280px;
+  height: 650px;
+  border-radius: 25px;
+  margin: 0 auto 100px;
+  background: #fff;
+}
+
+.form {
+  position: relative;
+  width: 930px;
+  height: 100%;
+  color: #2d862d;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+  padding: 10% 30px 0;
+}
+
+.sub-cont {
+  overflow: hidden;
+  position: absolute;
+  left: 930px;
+  top: 0;
+  width: 1280px;
+  height: 100%;
+  padding-left: 350px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+}
+.cont.s--signup .sub-cont {
+  -webkit-transform: translate3d(-930px, 0, 0);
+          transform: translate3d(-930px, 0, 0);
+}
+
+button {
+  display: block;
+  margin: 45px auto !important;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  padding-top: 360px;
+}
+.img:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1280px;
+  height: 100%;
+  background-image: url("https://www.thornburycastle.co.uk/uploads/images/generic-pets/_1140/luxury-family-hotels-pets-5.jpg");
+  background-size: cover;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+}
+.img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.cont.s--signup .img:before {
+  -webkit-transform: translate3d(930px, 0, 0);
+          transform: translate3d(930px, 0, 0);
+}
+.img__text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+}
+.img__text h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.img__text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cont.s--signup .img__text.m--up {
+  -webkit-transform: translateX(700px);
+          transform: translateX(700px);
+}
+.img__text.m--in {
+  -webkit-transform: translateX(-700px);
+          transform: translateX(-700px);
+}
+.cont.s--signup .img__text.m--in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.img__btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+.img__btn:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+.img__btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+.img__btn span.m--in {
+  -webkit-transform: translateY(-72px);
+          transform: translateY(-72px);
+}
+.cont.s--signup .img__btn span.m--in {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.cont.s--signup .img__btn span.m--up {
+  -webkit-transform: translateY(72px);
+          transform: translateY(72px);
+}
+
+h2 {
+  width: 100%;
+  letter-spacing: 1.4px;
+  font-size: 28px;
+  text-align: center;
+}
+
+label {
+  display: block !important;
+  width: 200px;
+  margin: 30px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #cfcfcf;
+}
+
+.submit {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  background: #fff;
+  color: #404040;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border: solid 2px #404040;
+  font-weight: 400;
+}
+
+.submit:hover {
+  background: #404040;
+  color: #fff;
+  border: solid 2px #828790;
+}
+
+.fb-btn {
+  border: 2px solid #d3dae9;
+  color: #8fa1c7;
+}
+.fb-btn span {
+  font-weight: bold;
+  color: #455a81;
+}
+
+.sign-in {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+.cont.s--signup .sign-in {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  -webkit-transform: translate3d(930px, 0, 0);
+          transform: translate3d(930px, 0, 0);
+}
+
+.sign-up {
+  -webkit-transform: translate3d(-1280px, 0, 0);
+          transform: translate3d(-1280px, 0, 0);
+}
+.cont.s--signup .sign-up {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.icon-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 32px;
+}
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+.icon-link--twitter {
+  left: auto;
+  right: 5px;
+}
+
+#forget-pw {
+  text-decoration: none;
+  color: #9BD0C0;
+  font-weight: 400;
+}
+
+#forget-pw:hover {
+  color: #BE0000;
+}
+
+.__welcome {
+  font-weight: 400;
+  color: #33AEE5;
+}
+
+.indent-small {
+  margin-left: 5px;
+}
+
+.form-group.internal {
+  margin-bottom: 0;
+}
+
+.dialog-panel {
+  margin: 10px;
+}
+
+.datepicker-dropdown {
+  z-index: 200 !important;
+}
+
+.panel-body {
+  background: #e5e5e5;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #e5e5e5), color-stop(100%, #ffffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%, #ffffff 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 12+ */
+  /* IE10+ */
+  background: -webkit-radial-gradient(center ellipse, #e5e5e5 0%, #ffffff 100%);
+  background: radial-gradient(ellipse at center, #e5e5e5 0%, #ffffff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  font: 600 15px "Open Sans", Arial, sans-serif;
+}
+
+label.control-label {
+  font-weight: 400;
+  color: #777;
+}
+
+.panel-primary {
+  border-color: #fff !important;
+}
+
+.panel-body {
+  font-family: 'Noto Sans TC', Helvetica, Arial, sans-serif;
+}
+
+.area {
+  margin-left: -15px;
+}
+/*.footer{
+  text-align: center;
+}*/
+
+.form-control{
+    font-size: 1.5rem!important;
+    
+    height: 34px!important;
+}
+.down-a-little{
+  margin-top: 5px;
+}
+.left-a-little{
+  padding-left: -15px; 
+}
